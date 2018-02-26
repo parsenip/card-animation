@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+	<title>Animation Challenge</title>
+	<style>
+		
+		/* Put your CSS code below. */
+		
+		#theDeck {
+			position:absolute;
+			width:200px;
+			height:300px;
+			left:800px;
+			top:100px;
+			
+		}
+		
+		
+		@keyframes jackmove {
+			from {	transform: rotateX(0deg) rotateY(0deg);	}
+			to {	transform: rotateX(0deg) rotateY(180deg)
+					translateX(500px);}
+		}
+		
+		#theJack {
+			position:absolute;
+			left:800px;
+			top:100px;
+			backface-visibility: hidden;
+			transform-style:preserve-3d;
+			animation-name: jackmove;
+			animation-duration:1s;
+			animation-fill-mode: both;
+			
+			
+		}
+		#theJack .face {
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:200px;
+			height:300px;
+			border:1px solid black;
+			color: red;
+			text-align: center;
+			font-size: 60px;
+			transform:rotateY(180deg);
+			backface-visibility: hidden;
+			
+			
+		}
+		
+		
+		@keyframes acemove {
+			from {	transform: rotateX(0deg) rotateY(0deg);	}
+			to {	transform: rotateX(0deg) rotateY(180deg)
+					translateX(250px);}
+		}
+		
+		#theAce {
+			position:absolute;
+			left:800px;
+			top:100px;
+			backface-visibility: hidden;
+			transform-style:preserve-3d;
+			animation-delay: 1s;
+			animation-name: acemove;
+			animation-duration:1s;
+			animation-fill-mode: both;
+		}
+		#theAce .face {
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:200px;
+			height:300px;
+			border:1px solid black;
+			color: black;
+			text-align: center;
+			font-size: 60px;
+			transform:rotateY(180deg);
+			backface-visibility: hidden;
+		}
+		
+		.back {
+			position:absolute;
+			top:0px;
+			left:0px;
+			border:1px solid black;
+			width:200px;
+			height:300px;
+			background: repeating-linear-gradient(45deg,red,yellow 7%,green 10%);
+			backface-visibility: hidden;
+			
+			
+		}
+		
+		
+		@keyframes blackjack {
+			
+		}
+		
+		h1 {
+		}
+		
+		/* Put your CSS code above. */
+	
+	</style>
+</head>
+<body>
+	
+	<h1>Blackjack!</h1>
+	
+	<div id="theDeck"></div>
+	
+	<div id="theJack">
+		<div class="face">
+			<!-- You may edit below -->
+			J<br/>
+			♥
+			<!-- You may edit above -->
+		</div>
+		<div class="back"></div>
+	</div>
+	
+	<div id="theAce">
+		<div class="face">
+			<!-- You may edit below -->
+			A<br/>
+			♠
+			<!-- You may edit above -->
+		</div>
+		<div class="back"></div>
+	</div>
+	
+</body>
+</html>
